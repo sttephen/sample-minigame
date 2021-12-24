@@ -1,8 +1,6 @@
 package com.stephen.minigame;
 
 import com.stephen.minigame.command.ArenaCommand;
-import com.stephen.minigame.instance.Arena;
-import com.stephen.minigame.instance.Game;
 import com.stephen.minigame.listener.ConnectListener;
 import com.stephen.minigame.listener.GameListener;
 import com.stephen.minigame.manager.ArenaManager;
@@ -27,4 +25,5 @@ public final class Minigame extends JavaPlugin {
     }
 
     public ArenaManager getArenaManager() { return arenaManager; }
+
 }

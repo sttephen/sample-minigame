@@ -3,11 +3,8 @@ package com.stephen.minigame.instance;
 import com.stephen.minigame.GameState;
 import com.stephen.minigame.Minigame;
 import com.stephen.minigame.manager.ConfigManager;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.scheduler.BukkitRunnable;
-
-import java.util.UUID;
 
 public class Countdown extends BukkitRunnable {
 

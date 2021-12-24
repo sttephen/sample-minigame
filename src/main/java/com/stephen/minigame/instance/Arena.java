@@ -6,7 +6,6 @@ import com.stephen.minigame.manager.ConfigManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 
 import java.util.ArrayList;
 import java.util.List;

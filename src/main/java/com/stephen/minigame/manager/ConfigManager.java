@@ -5,8 +5,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 
-import java.util.Optional;
-
 public class ConfigManager {
 
     private static FileConfiguration config;

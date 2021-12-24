@@ -1,6 +1,5 @@
 package com.stephen.minigame.manager;
 
-import com.stephen.minigame.GameState;
 import com.stephen.minigame.Minigame;
 import com.stephen.minigame.instance.Arena;
 import org.bukkit.Bukkit;
@@ -9,7 +8,6 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class ArenaManager {

@@ -3,7 +3,6 @@ package com.stephen.minigame.command;
 import com.stephen.minigame.GameState;
 import com.stephen.minigame.Minigame;
 import com.stephen.minigame.instance.Arena;
-import com.stephen.minigame.manager.ConfigManager;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
