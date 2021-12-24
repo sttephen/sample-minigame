@@ -36,8 +36,7 @@ public class Countdown extends BukkitRunnable {
         }
 
         if (arena.getPlayers().size() < ConfigManager.getRequiredPlayers()) {
-            cancel();
-            arena.setState(GameState.RECRUITING);
+            arena.reset();
             arena.sendMessage(ChatColor.RED + "There is not enough players. Countdown stopped.");
             arena.sendTitle("","");
             return;
