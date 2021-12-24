@@ -42,7 +42,10 @@ public class Arena {
 
     public void reset() {
         for (UUID uuid : players) {
-            removePlayer(Bukkit.getPlayer(uuid)); // will aways be here cos wouldnt be in list otherwise
+            Player player = Bukkit.getPlayer(uuid);
+            players.remove(player.getUniqueId());
+            player.teleport(ConfigManager.getLobbySpawn());
+            player.sendTitle("","");
         }
         countdown.cancel();
         state = GameState.RECRUITING;
@@ -56,7 +59,7 @@ public class Arena {
         players.add(player.getUniqueId());
         player.teleport(spawn);
 
-        if (players.size() >= ConfigManager.getRequiredPlayers()) { // won't be in anything but recruiting if run
+        if (state.equals(GameState.RECRUITING) && players.size() >= ConfigManager.getRequiredPlayers()) {
             countdown.start();
         }
     }
