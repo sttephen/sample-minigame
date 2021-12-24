@@ -49,7 +49,7 @@ public class ArenaCommand implements CommandExecutor {
                     return false;
                 }
 
-                if (id >= 0 && id <= minigame.getArenaManager().getArenas().size()) {
+                if (id >= 0 && id < minigame.getArenaManager().getArenas().size()) {
                     Arena arena = minigame.getArenaManager().getArena(id);
                     if (arena.getState().equals(GameState.RECRUITING) || arena.getState().equals(GameState.COUNTDOWN)) {
                         player.sendMessage(ChatColor.GREEN + "You are now playing in Arena " + id + ".");

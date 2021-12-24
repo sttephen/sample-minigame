@@ -29,8 +29,8 @@ public class Game {
     public void addPoint(Player player) {
         int playerPoints = points.get(player.getUniqueId()) + 1;
         if (playerPoints == 20) {
-            arena.sendMessage(ChatColor.GOLD + player.getName() + " HAS WON!");
-            arena.reset();
+            arena.sendMessage(ChatColor.GOLD + player.getName() + " HAS WON! Thanks for playing this minigame.");
+            arena.reset(true);
             return;
         }
 

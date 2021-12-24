@@ -4,6 +4,7 @@ import com.stephen.minigame.GameState;
 import com.stephen.minigame.Minigame;
 import com.stephen.minigame.manager.ConfigManager;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
@@ -40,13 +41,15 @@ public class Arena {
         game.start();
     }
 
-    public void reset() {
-        for (UUID uuid : players) {
-            Player player = Bukkit.getPlayer(uuid);
-            players.remove(player.getUniqueId());
-            player.teleport(ConfigManager.getLobbySpawn());
-            player.sendTitle("","");
+    public void reset(boolean kickPlayers) {
+        if (kickPlayers) {
+            for (UUID uuid : players) {
+                Player player = Bukkit.getPlayer(uuid);
+                player.teleport(ConfigManager.getLobbySpawn());
+            }
+            players.clear();
         }
+        sendTitle("","");
         countdown.cancel();
         state = GameState.RECRUITING;
         this.countdown = new Countdown(minigame, this);
@@ -69,8 +72,16 @@ public class Arena {
         player.teleport(ConfigManager.getLobbySpawn());
         player.sendTitle("","");
 
-        if (state == GameState.LIVE && players.size() == 0) {
-            reset();
+        if (state == GameState.COUNTDOWN && players.size() < ConfigManager.getRequiredPlayers()) {
+            sendMessage(ChatColor.RED + "There is not enough players. Countdown stopped.");
+            reset(false);
+            return;
+        }
+
+        if (state == GameState.LIVE && players.size() < ConfigManager.getRequiredPlayers()) {
+            sendMessage(ChatColor.RED + "The game has ended as too many players have left.");
+            reset(false);
+            return;
         }
     }
 

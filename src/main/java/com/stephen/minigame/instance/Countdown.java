@@ -31,13 +31,13 @@ public class Countdown extends BukkitRunnable {
             arena.sendTitle("","");
             return;
         }
-
-        if (arena.getPlayers().size() < ConfigManager.getRequiredPlayers()) {
-            arena.reset();
-            arena.sendMessage(ChatColor.RED + "There is not enough players. Countdown stopped.");
-            arena.sendTitle("","");
-            return;
-        }
+//
+//        if (arena.getPlayers().size() < ConfigManager.getRequiredPlayers()) {
+//            arena.reset(false);
+//            arena.sendMessage(ChatColor.RED + "There is not enough players. Countdown stopped.");
+//            arena.sendTitle("","");
+//            return;
+//        }
 
         if (seconds % 30 == 0 || seconds <= 10) {
             arena.sendMessage(ChatColor.GREEN + "Game will start in " + seconds + " second" + (seconds == 1 ? "" : "s") + ".");
