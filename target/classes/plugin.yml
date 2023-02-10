@@ -1,6 +1,0 @@
-name: Minigame
-version: '1.0-SNAPSHOT'
-main: com.stephen.minigame.Minigame
-api-version: 1.17
-commands:
-  arena:
