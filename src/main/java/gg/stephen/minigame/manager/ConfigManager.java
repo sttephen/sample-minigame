@@ -1,6 +1,6 @@
-package com.stephen.minigame.manager;
+package gg.stephen.minigame.manager;
 
-import com.stephen.minigame.Minigame;
+import gg.stephen.minigame.Minigame;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -11,7 +11,6 @@ public class ConfigManager {
 
     public static void setupConfig(Minigame minigame) {
         ConfigManager.config = minigame.getConfig();
-        config.options().copyDefaults();
         minigame.saveDefaultConfig();
     }
 
@@ -20,7 +19,8 @@ public class ConfigManager {
     public static int getCountdownSeconds() { return config.getInt("countdown-seconds"); }
 
     public static Location getLobbySpawn() {
-        return new Location(Bukkit.getWorld(config.getString("lobby-spawn.world")),
+        return new Location(
+                Bukkit.getWorld(config.getString("lobby-spawn.world")),
                 config.getDouble("lobby-spawn.x"),
                 config.getDouble("lobby-spawn.y"),
                 config.getDouble("lobby-spawn.z"),

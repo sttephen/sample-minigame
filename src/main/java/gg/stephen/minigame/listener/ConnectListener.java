@@ -1,7 +1,7 @@
-package com.stephen.minigame.listener;
+package gg.stephen.minigame.listener;
 
-import com.stephen.minigame.Minigame;
-import com.stephen.minigame.manager.ConfigManager;
+import gg.stephen.minigame.Minigame;
+import gg.stephen.minigame.manager.ConfigManager;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

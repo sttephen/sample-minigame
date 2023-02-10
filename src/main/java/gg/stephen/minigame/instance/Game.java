@@ -1,6 +1,6 @@
-package com.stephen.minigame.instance;
+package gg.stephen.minigame.instance;
 
-import com.stephen.minigame.GameState;
+import gg.stephen.minigame.GameState;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 

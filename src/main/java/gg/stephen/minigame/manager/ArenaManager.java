@@ -1,7 +1,7 @@
-package com.stephen.minigame.manager;
+package gg.stephen.minigame.manager;
 
-import com.stephen.minigame.Minigame;
-import com.stephen.minigame.instance.Arena;
+import gg.stephen.minigame.Minigame;
+import gg.stephen.minigame.instance.Arena;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;

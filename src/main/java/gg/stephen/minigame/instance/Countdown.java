@@ -1,8 +1,8 @@
-package com.stephen.minigame.instance;
+package gg.stephen.minigame.instance;
 
-import com.stephen.minigame.GameState;
-import com.stephen.minigame.Minigame;
-import com.stephen.minigame.manager.ConfigManager;
+import gg.stephen.minigame.GameState;
+import gg.stephen.minigame.Minigame;
+import gg.stephen.minigame.manager.ConfigManager;
 import org.bukkit.ChatColor;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -31,13 +31,13 @@ public class Countdown extends BukkitRunnable {
             arena.sendTitle("","");
             return;
         }
-//
-//        if (arena.getPlayers().size() < ConfigManager.getRequiredPlayers()) {
-//            arena.reset(false);
-//            arena.sendMessage(ChatColor.RED + "There is not enough players. Countdown stopped.");
-//            arena.sendTitle("","");
-//            return;
-//        }
+
+        if (arena.getPlayers().size() < ConfigManager.getRequiredPlayers()) {
+            arena.reset(false);
+            arena.sendMessage(ChatColor.RED + "There is not enough players. Countdown stopped.");
+            arena.sendTitle("","");
+            return;
+        }
 
         if (seconds % 30 == 0 || seconds <= 10) {
             arena.sendMessage(ChatColor.GREEN + "Game will start in " + seconds + " second" + (seconds == 1 ? "" : "s") + ".");

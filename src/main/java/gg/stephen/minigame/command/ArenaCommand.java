@@ -1,8 +1,8 @@
-package com.stephen.minigame.command;
+package gg.stephen.minigame.command;
 
-import com.stephen.minigame.GameState;
-import com.stephen.minigame.Minigame;
-import com.stephen.minigame.instance.Arena;
+import gg.stephen.minigame.GameState;
+import gg.stephen.minigame.Minigame;
+import gg.stephen.minigame.instance.Arena;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

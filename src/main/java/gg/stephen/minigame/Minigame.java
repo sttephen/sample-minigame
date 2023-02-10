@@ -1,10 +1,10 @@
-package com.stephen.minigame;
+package gg.stephen.minigame;
 
-import com.stephen.minigame.command.ArenaCommand;
-import com.stephen.minigame.listener.ConnectListener;
-import com.stephen.minigame.listener.GameListener;
-import com.stephen.minigame.manager.ArenaManager;
-import com.stephen.minigame.manager.ConfigManager;
+import gg.stephen.minigame.command.ArenaCommand;
+import gg.stephen.minigame.listener.ConnectListener;
+import gg.stephen.minigame.listener.GameListener;
+import gg.stephen.minigame.manager.ArenaManager;
+import gg.stephen.minigame.manager.ConfigManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 

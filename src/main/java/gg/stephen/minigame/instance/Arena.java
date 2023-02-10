@@ -1,8 +1,8 @@
-package com.stephen.minigame.instance;
+package gg.stephen.minigame.instance;
 
-import com.stephen.minigame.GameState;
-import com.stephen.minigame.Minigame;
-import com.stephen.minigame.manager.ConfigManager;
+import gg.stephen.minigame.GameState;
+import gg.stephen.minigame.Minigame;
+import gg.stephen.minigame.manager.ConfigManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -37,6 +37,7 @@ public class Arena {
     }
 
     /* GAME */
+
     public void start() {
         game.start();
     }
@@ -81,7 +82,6 @@ public class Arena {
         if (state == GameState.LIVE && players.size() < ConfigManager.getRequiredPlayers()) {
             sendMessage(ChatColor.RED + "The game has ended as too many players have left.");
             reset(false);
-            return;
         }
     }
 

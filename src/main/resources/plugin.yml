@@ -1,6 +1,6 @@
 name: Minigame
 version: '${project.version}'
-main: com.stephen.minigame.Minigame
+main: gg.stephen.minigame.Minigame
 api-version: 1.17
 commands:
   arena:

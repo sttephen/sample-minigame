@@ -1,4 +1,4 @@
-package com.stephen.minigame;
+package gg.stephen.minigame;
 
 public enum GameState {
 
